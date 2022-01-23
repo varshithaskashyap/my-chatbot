@@ -1,0 +1,34 @@
+{
+    "deploy.reloaded": {
+        "language": "en",
+        "packages": [
+            {
+                "name": "my-chatbot",
+                "files": [
+                    "/**",
+                    "*"
+                ],
+                "deployOnChange": true,
+                "fastCheckOnChange": true,
+                "deployOnSave": true,
+                "fastCheckOnSave": true,
+                "removeOnChange": true,
+                
+                "targets": [
+                    "Apache local"
+                ],
+                "showStatusWhenFinished": true,
+                "deployOnChangeButton": true
+            }
+        ],
+        "targets": [
+            {
+                "type": "local",
+                "name": "Apache local",
+                "dir": "/var/www/html/my-chatbot",
+            }
+        ],
+        "showStatusWhenFinished": true,
+        "timeToWaitBeforeActivateDeployOnChange": 5000
+    },
+}
